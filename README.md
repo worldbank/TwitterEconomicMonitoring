@@ -9,7 +9,7 @@ The booming use of social media platforms, such as Twitter, made individuals’ 
 
 Yet, an important challenge when working with Twitter data is the lack of representativeness of the Twitter population. Being on Twitter requires being literate, having a good Internet connection and an email address. This restricts the potential share of the population with a Twitter account to a relatively richer, younger share of the population. Even if individuals have access to these resources and use social media networks for example, the data produced by these networks is not necessarily representative of all of its users. According to Twitter, in 2011, 40% of the network’s active users would sign in just to read messages from other users. Some users may not even be humans, with between 9% and 15% of 2017 Twitter active users being bots (Varol et al., 2017). 
 
-One solution to this challenge is to combine demographic inference of Twitter users and post-stratification to build more representative samples. One solution to get user demographics is to match users with existing datasets containing individual socioeconomic information. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name. When such a dataset as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics, such as age, gender or whether the account belong to an organization, can be inferred based on user information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this learning material, we show how to address this challenge by including one notebook on demographic inference [add details on which notebook it is]
+One solution to this challenge is to combine demographic inference of Twitter users and post-stratification to build more representative samples. One solution to get user demographics is to match users with existing datasets containing individual socioeconomic information. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name. When such a dataset as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics, such as age, gender or whether the account belong to an organization, can be inferred based on user information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this learning material, we include one notebook on demographic inference, and more specifically gender inference, as a first step to address this challenge. 
  
 
 ## Content
@@ -18,15 +18,15 @@ This repository contains the following:
   - `1-download-from-twitter-api.ipynb`: details how to download tweets from the Twitter API using the module `tweepy`
   - `2-machine-translation.ipynb`: shows how to use state-of-the-art translation models from the Hugging Face model hub
   - `3-sentiment-analysis.ipynb`: performs sentiment analysis on Pakistani tweets with Hedonometer
-  - `4-build-unemployment-index.ipynb`: builds an unemployment index from tweets for Mexico and Brazil
+  - `4-build-unemployment-index.ipynb`: builds an unemployment index from tweets for Mexico 
   - `5-misinformation-analysis.ipynb`: quantifies misinformation in COVID-19-reltaed tweets by looking for links whose domains are listed as fake news by [Newsguard](https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/)
-  - A `data` folder containing related data needed to run the notebooks
+  - `6-gender-inference`: infers gender of Brazilian Twitter users 
   - An `outputs` folder containing graphs outputted by the notebooks
 - `README.md`: the present file
   
   
 ## Requirements
-- The notebooks are written in Python 3. You therefore need a minimum knowledge of Python and famous Python modules such as `pandas`.
+- The notebooks are written in Python 3. You therefore need a minimum knowledge of Python and famous Python modules such as `pandas` to understand these tutorials.
 - There are no compulsory package requirements as all notebooks can be run on the cloud in Google Colab. To open a notebook in Google Colab, simply click on the ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) icon at the top of that notebook. In case you prefer to run the notebooks locally, specific package requirements are indicated at the top of each notebook.
 
 ## References
