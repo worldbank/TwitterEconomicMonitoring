@@ -132,7 +132,7 @@ def plot_gdp_and_users(dataframe):
     fig.update_xaxes(ticks = "outside", tickwidth = .25, tickcolor='black', ticklen = 10)
     fig.update_yaxes(ticks = "outside", tickwidth = .25, tickcolor='black', ticklen = 10)
     fig.update_traces(
-        hovertemplate = "<br>".join([
+        hovertemplate = "<br>".join(["Country: %{text}",
             "GDP per capita: %{x:,.0f}" + "<extra></extra>",
             "Users per 1,000 people: %{y:,.2f}"]))
     return fig
