@@ -31,7 +31,7 @@ In 2010, we started building a massive Twitter dataset using the Twitter Decahos
 
 ### Challenges with Twitter data
 
-One important challenge when working with Twitter data is the lack of representativeness of the population of Twitter users. Being on Twitter requires being literate, having a good Internet connection and an email address. As a result, the share of the world's population on Twitter tend to be located in richer countries and regions. This is illustrated in the figure below showing the relationship between Twitter peneration and GDP per capita, for countries with 50 or more Twitter users per 1000 inhabitants and a GDP per capita of at least 10.000 USD (value of 2019). 
+One important challenge when working with Twitter data is the lack of representativeness of the population of Twitter users. Being on Twitter requires being literate, having a good Internet connection and an email address. As a result, the share of the world's population on Twitter tend to be located in richer countries and regions. This is illustrated in the figure below showing the relationship between Twitter penetration and GDP per capita, for countries with 50 or more Twitter users per 1000 inhabitants and a GDP per capita of at least 10.000 USD (value of 2019). 
 
 ![Illustration](visualizations/pictures/twitter_gdp_capita.png)
 *Legend: Number of Twitter users per 1000 inhabitants of a country related this country's GDP per capita.*
