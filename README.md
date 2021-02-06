@@ -1,7 +1,7 @@
 # Twitter tutorials
 
 ## Introduction
-The rapid escalation of the COVID-19 crisis has emphasized the need to extract real-time policy insights from big data sources to compensate for the limitations of other data sources. In this project, we provide training material to educate practitioners on how to generate indicators out of Twitter data on crucial issues associated with the COVID-19 crisis with a focus on unemployment, public sentiment, and misinformation, with practical examples focusing on in Brazil, Mexico, and Pakistan.
+The rapid escalation of the COVID-19 crisis has emphasized the need to extract real-time policy insights from big data sources, especially in developing countries. In this project, we provide training material to educate development reseachers and practitioners on how to generate indicators from Twitter data on key issues associated with the COVID-19 crisis, with a focus on unemployment, public sentiment, and misinformation, highlighting practical examples focusing on Brazil, Mexico, and Pakistan.
 
 ## Content
 This repository contains the following:
@@ -9,14 +9,14 @@ This repository contains the following:
   - `1-download-from-twitter-api.ipynb`: details how to download tweets from the Twitter API using the module `tweepy`
   - `2-machine-translation.ipynb`: shows how to use state-of-the-art translation models from the Hugging Face model hub
   - `3-sentiment-analysis.ipynb`: performs sentiment analysis on Pakistani tweets with Hedonometer
-  - `4-build-unemployment-index.ipynb`: builds an unemployment index from tweets for Mexico 
-  - `5-misinformation-analysis.ipynb`: quantifies misinformation in COVID-19-reltaed tweets by looking for links whose domains are listed as fake news by [Newsguard](https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/)
-  - `6-gender-inference`: infers gender of Brazilian Twitter users 
-  - An `outputs` folder containing graphs outputted by the notebooks
+  - `4-build-unemployment-index.ipynb`: builds an unemployment index from tweets located in Mexico 
+  - `5-misinformation-analysis.ipynb`: quantifies misinformation in COVID-19-related tweets by looking for links whose domains are listed as fake news by [Newsguard](https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/)
+  - `6-gender-inference`: infers the gender of Twitter users located in Brazil 
+  - An `outputs` folder containing graphs produced using these notebooks
 - `README.md`: the present file
 
 ## Requirements
-- The notebooks are written in Python 3. You therefore need a minimum knowledge of Python and famous Python modules such as `pandas` to understand these tutorials.
+- The notebooks are written in Python 3. A basic knowledge of Python and of the most common Python modules such as `pandas` is required to understand these tutorials.
 - There are no compulsory package requirements as all notebooks can be run on the cloud in Google Colab. To open a notebook in Google Colab, simply click on the ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) icon at the top of that notebook. In case you prefer to run the notebooks locally, specific package requirements are indicated at the top of each notebook.
 
 ## Motivation
