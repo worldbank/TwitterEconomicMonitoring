@@ -51,7 +51,9 @@ Beyond socio-economic and geographical biases, there are large heterogeneities i
 
 One solution to some of these challenges is to combine demographic inference of Twitter users and post-stratification to build more representative samples. One way to measure users demographic characteristics is to match each Twitter data with existing datasets containing socioeconomic information on individuals. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name. When a dataset such as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics characteristics such as age and gender, or whether the account belong to an organization, can be inferred based on user self-reported information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this tutorial, we include one notebook containing a toy example of how demographic characteristics of Twitter users can be inferred from the data, as a first step to address this challenge. 
  
+### Ongoing research and product development using Twitter data
 
+Using the historical data from Twitter, we collected information on a panel of 120Million users located in 182 countries. This dataset is currently used in several projects, including the early detection of variations in labor market flows ([IC2S2 2020 presentation](https://www.youtube.com/watch?v=ZxFrtUW2dYA&feature=emb_logo)). Using this data taught us valuable lessons on the challenges of working with Twitter data and the best practices to tackle them. 
 
 ## References
 
