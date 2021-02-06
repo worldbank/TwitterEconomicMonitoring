@@ -27,11 +27,11 @@ The booming use of social media platforms, such as Twitter, made individuals’ 
 
 ### Massive Twitter scraping at the World Bank
 
-In 2010, we started building a massive Twitter dataset using the Twitter Decahose. As of February 2021, this dataset contains tweets from more than 120 million geolocated users in 182 countries. Twitter users from our dataset joined Twitter in 2019 or earlier. Only users whose user-informed location contained a city name that could be geocoded with the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) were kept. This dataset was already used for several projects, including the early detection of labor market flows ([IC2S2 2020 presentation](https://www.youtube.com/watch?v=ZxFrtUW2dYA&feature=emb_logo)). Using this data taught us valuable lessons on the challenges with Twitter data and the best practices to tackle them. 
+In 2010, we started building a massive Twitter dataset using the Twitter Decahose. As of February 2021, this dataset contains tweets from more than 120 million geolocated users in 182 countries. Twitter users from our dataset joined Twitter in 2019 or earlier. Only users whose user-informed location contained a city name that could be geocoded with the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) were kept. This dataset was already used for several projects, including the early detection of labor market flows ([IC2S2 2020 presentation](https://www.youtube.com/watch?v=ZxFrtUW2dYA&feature=emb_logo)). Using this data taught us valuable lessons on the challenges of working with Twitter data and the best practices to tackle them. 
 
 ### Challenges with Twitter data
 
-One important challenge when working with Twitter data is the lack of representativeness of the Twitter population. Being on Twitter requires being literate, having a good Internet connection and an email address. This restricts the potential share of the population with a Twitter account to a relatively richer share of the world population. This is observed in our dataset in which most represented countries with 50 or more Twitter users per 1000 inhabitants have a GDP per capita of at least 10.000 USD (value of 2019).
+One important challenge when working with Twitter data is the lack of representativeness of the Twitter population. Being on Twitter requires being literate, having a good Internet connection and an email address. This restricts the potential share of the world population with a Twitter account to a relatively richer share. This is observed in our dataset in which most represented countries with 50 or more Twitter users per 1000 inhabitants have a GDP per capita of at least 10.000 USD (value of 2019).
 
 ![Illustration](visualizations/pictures/twitter_gdp_capita.png)
 *Legend: Number of Twitter users per 1000 inhabitants of a country related this country's GDP per capita.*
@@ -40,6 +40,10 @@ Geographically, this results in an over-representation of North America, Europe,
 
 ![Illustration](visualizations/pictures/map_total_number_users.png)
 *Legend: Gross number of Twitter users from our dataset per city. Each dot represents a city in which Twitter users reside. The relative size of dots is determined by the gross number of Twitter users per city. Only city with 300.000 inhabitants or more are represented.*
+
+In terms of share of the population using Twitter, some countries stand out with more than 5% of their population using Twitter. These countries include developed countries such as the United Kingdom (11.4%), the USA (9.5%) or Canada (6.9%) but also middle income countries,  such as Uruguay (7.6%), Argentina (6.5%) or Venezuela (6%), as well as low-populated countries (Kuwait with 9.9%, Bermuda with 9.6% or Barbados with 6.9%). The complete data on the Twitter coverage of our dataset per country can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_countries.csv).
+
+![Illustration](visualizations/pictures/bar_user_country.png)
 
 
 ### Demographic inference as a solution
