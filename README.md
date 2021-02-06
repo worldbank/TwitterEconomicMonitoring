@@ -31,15 +31,15 @@ In 2010, we started building a massive Twitter dataset using the Twitter Decahos
 
 ### Challenges with Twitter data
 
-One important challenge when working with Twitter data is the lack of representativeness of the population of Twitter users. Being on Twitter requires being literate, having a good Internet connection and an email address. As a result, the share of the world's population on Twitter tend to be located in richer countries and regions. This is illustrated in the figure below showing the relationship between Twitter penetration and GDP per capita, for countries with 50 or more Twitter users per 1000 inhabitants and a GDP per capita of at least 10.000 USD (value of 2019). 
+One important challenge when working with Twitter data is the lack of representativeness of the population of Twitter users. Being on Twitter requires being literate, having a good Internet connection and an email address. As a result, the share of the world's population on Twitter tend to be located in richer countries and regions. This is illustrated in the figure below showing the relationship between Twitter penetration and GDP per capita (value of 2019). 
 
 ![Illustration](visualizations/pictures/twitter_gdp_capita.png)
-*Legend: Number of Twitter users per 1000 inhabitants of a country related this country's GDP per capita.*
+*Legend: Number of Twitter users per 1000 inhabitants and GDP per capita, for countries with 50 or more Twitter users per 1000 inhabitants and a GDP per capita of at least 10.000 USD.*
 
-Overall, we find that Twitter is over representated as a share of the population in North and South America, Western Europe, Northeast and Southeast Asia. By contrast, only a tiny fraction of the African population is on Twitter. 
+Overall, we find that Twitter is over-representated as a share of the population in North and South America, Western Europe, Northeast and Southeast Asia. By contrast, only a tiny fraction of the African population is on Twitter. 
 
 ![Illustration](visualizations/pictures/map_total_number_users.png)
-*Legend: Estimates of the number of Twitter users per city. Each dot represents a city in which Twitter users reside. The relative size of dots is determined by the gross number of Twitter users. Only city with 300.000 inhabitants or more are represented.*
+*Legend: Estimates of the number of Twitter users per city. Each dot represents a city, the size of each dot encodes the gross number of Twitter users reporting to live in that city, for cities with 300.000 inhabitants or more.*
 
 Some countries have relatively high penetration rate, with more than 5% of their population using Twitter. These countries include developed countries such as the United Kingdom (11.4%), the USA (9.5%) or Canada (6.9%) but also middle income countries,  such as Uruguay (7.6%), Argentina (6.5%) or Venezuela (6%), as well as low-populated countries (Kuwait with 9.9%, Bermuda with 9.6% or Barbados with 6.9%). Estimates of Twitter penetration rate per country can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_countries.csv).
 
