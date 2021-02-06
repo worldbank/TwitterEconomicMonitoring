@@ -36,7 +36,7 @@ One important challenge when working with Twitter data is the lack of representa
 ![Illustration](visualizations/pictures/twitter_gdp_capita.png)
 *Legend: Number of Twitter users per 1000 inhabitants of a country related this country's GDP per capita.*
 
-Geographically, this results in an over-representation of North America, Europe, Northeast Asia, South America and Southeast Asia. 
+Geographically, this results in an over-representation of North and South America, Western Europe, Northeast and Southeast Asia. 
 
 ![Illustration](visualizations/pictures/map_total_number_users.png)
 *Legend: Gross number of Twitter users from our dataset per city. Each dot represents a city in which Twitter users reside. The relative size of dots is determined by the gross number of Twitter users per city. Only city with 300.000 inhabitants or more are represented.*
@@ -45,26 +45,32 @@ In terms of share of the population using Twitter, some countries stand out with
 
 ![Illustration](visualizations/pictures/bar_user_country.png)
 
+At the city level, London is the most represented city in terms of gross number of users with 1.6 million Twitter users, followed by New York (1.5 million) and Jakarta (1.2 million). In terms of share of the population using Twitter, the top 2 cities are Indonesian with 59% of Yogyakarta's inhabitants and 23% of Bandung's on Twitter. The complete data on the Twitter coverage of our dataset per city can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_cities.csv). 
+
+![Illustration](visualizations/pictures/bar_user_city.png)
+
+Now, on top of the different socio-economic and geographical characteristics of population groups on and off Twitter, Twitter data is not produced equally by Twitter users. According to Twitter, in 2011, 40% of the network’s active users would sign in just to read messages from other users. Some users may not even be humans, with between 9% and 15% of 2017 Twitter active users being bots (Varol et al., 2017).
 
 ### Demographic inference as a solution
 
-One solution to this challenge is to combine demographic inference of Twitter users and post-stratification to build more representative samples. One solution to get user demographics is to match users with existing datasets containing individual socioeconomic information. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name. When such a dataset as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics, such as age, gender or whether the account belong to an organization, can be inferred based on user information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this learning material, we include one notebook on demographic inference, and more specifically gender inference, as a first step to address this challenge. 
+One solution to this challenge is to combine demographic inference of Twitter users and post-stratification to build more representative samples. One way to get user demographics is to match users with existing datasets containing individual socioeconomic information. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name. When such a dataset as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics, such as age, gender or whether the account belong to an organization, can be inferred based on user information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this learning material, we include one notebook on demographic inference, and more specifically gender inference, as a first step to address this challenge. 
  
 
 
 ## References
 
+Chamberlain, B. P., Humby, C., & Deisenroth, M. P. (2017, September). Probabilistic inference of twitter users’ age based on what they follow. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (pp. 191-203). Springer, Cham.
+
 Dodds, P., Clark, E., Desu, S., Frank, M., Reagan, A., Williams, J., Mitchell, L., Harris, K., Kloumann, I., Bagrow, J., Megerdoomian, K., McMahon, M., Tivnan, B., & Danforth, C.. (2014). Human language reveals a universal positivity bias.
-
-Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, Joe Davison, Sam Shleifer, Patrick von Platen, Clara Ma, Yacine Jernite, Julien Plu, Canwen Xu, Teven Le Scao, Sylvain Gugger, Mariama Drame, Quentin Lhoest, & Alexander M. Rush (2020). Transformers: State-of-the-Art Natural Language Processing. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations (pp. 38–45). Association for Computational Linguistics.
-
-Roesslein, J. (2020). Tweepy: Twitter for Python!URL: https://github.com/tweepy/tweepy.
-
 
 Grinberg, N., Joseph, K., Friedland, L., Swire-Thompson, B., & Lazer, D. (2019). Fake news on Twitter during the 2016 US presidential election. Science, 363(6425), 374-378.
 
 Nguyen, D., Gravel, R., Trieschnigg, D., & Meder, T. (2013, June). " How Old Do You Think I Am?" A Study of Language and Age in Twitter. In Proceedings of the International AAAI Conference on Web and Social Media (Vol. 7, No. 1).
 
-Chamberlain, B. P., Humby, C., & Deisenroth, M. P. (2017, September). Probabilistic inference of twitter users’ age based on what they follow. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (pp. 191-203). Springer, Cham.
+Roesslein, J. (2020). Tweepy: Twitter for Python!URL: https://github.com/tweepy/tweepy.
+
+Varol, O., Ferrara, E., Davis, C., Menczer, F., & Flammini, A. (2017, May). Online human-bot interactions: Detection, estimation, and characterization. In Proceedings of the International AAAI Conference on Web and Social Media (Vol. 11, No. 1).
 
 Wang, Z., Hale, S., Adelani, D. I., Grabowicz, P., Hartman, T., Flöck, F., & Jurgens, D. (2019, May). Demographic inference and representative population estimates from multilingual social media data. In The World Wide Web Conference (pp. 2056-2067).
+
+Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, Joe Davison, Sam Shleifer, Patrick von Platen, Clara Ma, Yacine Jernite, Julien Plu, Canwen Xu, Teven Le Scao, Sylvain Gugger, Mariama Drame, Quentin Lhoest, & Alexander M. Rush (2020). Transformers: State-of-the-Art Natural Language Processing. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations (pp. 38–45). Association for Computational Linguistics.
