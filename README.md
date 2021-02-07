@@ -1,7 +1,7 @@
 # Twitter tutorials
 
 ## Introduction
-The rapid escalation of the COVID-19 crisis has emphasized the need to extract real-time policy insights from big data sources to compensate for the limitations of other data sources. In this project, we provide training material to educate practitioners on how to generate indicators out of Twitter data on crucial issues associated with the COVID-19 crisis with a focus on unemployment, public sentiment, and misinformation, with practical examples focusing on in Brazil, Mexico, and Pakistan.
+The rapid escalation of the COVID-19 crisis has emphasized the need to extract real-time policy insights from big data sources, especially in developing countries. In this project, we provide training material to educate development reseachers and practitioners on how to generate indicators from Twitter data on key issues associated with the COVID-19 crisis, with a focus on unemployment, public sentiment, and misinformation, highlighting practical examples focusing on Brazil, Mexico, and Pakistan.
 
 ## Content
 This repository contains the following:
@@ -9,53 +9,48 @@ This repository contains the following:
   - `1-download-from-twitter-api.ipynb`: details how to download tweets from the Twitter API using the module `tweepy`
   - `2-machine-translation.ipynb`: shows how to use state-of-the-art translation models from the Hugging Face model hub
   - `3-sentiment-analysis.ipynb`: performs sentiment analysis on Pakistani tweets with Hedonometer
-  - `4-build-unemployment-index.ipynb`: builds an unemployment index from tweets for Mexico 
-  - `5-misinformation-analysis.ipynb`: quantifies misinformation in COVID-19-reltaed tweets by looking for links whose domains are listed as fake news by [Newsguard](https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/)
-  - `6-gender-inference`: infers gender of Brazilian Twitter users 
-  - An `outputs` folder containing graphs outputted by the notebooks
+  - `4-build-unemployment-index.ipynb`: builds an unemployment index from tweets located in Mexico 
+  - `5-misinformation-analysis.ipynb`: quantifies misinformation in COVID-19-related tweets by looking for links whose domains are listed as fake news by [Newsguard](https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/)
+  - `6-gender-inference`: infers the gender of Twitter users located in Brazil 
+  - An `outputs` folder containing graphs produced using these notebooks
+- A `visualizations` folder containing the graphics displayed below and data/code to replicate these graphics
 - `README.md`: the present file
 
 ## Requirements
-- The notebooks are written in Python 3. You therefore need a minimum knowledge of Python and famous Python modules such as `pandas` to understand these tutorials.
+- The notebooks are written in Python 3. A basic knowledge of Python and of the most common Python modules such as `pandas` is required to understand these tutorials.
 - There are no compulsory package requirements as all notebooks can be run on the cloud in Google Colab. To open a notebook in Google Colab, simply click on the ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) icon at the top of that notebook. In case you prefer to run the notebooks locally, specific package requirements are indicated at the top of each notebook.
 
 ## Motivation
 
 ### Twitter as a complementary data source
 
-The booming use of social media platforms, such as Twitter, made individuals’ daily preoccupations and interests available to researchers. Compared to traditional public-intent data, social media measures, by design, can identify shifts in public opinion earlier and provide a more granular picture of heterogeneity in the population. It can also inform and enhance the targeting of surveys as well as bring a new lens for understanding public opinion on economic policy. On top of their informational value, these new data sources have the advantage of being easily accessible. In the case of Twitter, the data is accessible, with some download limit rate, to all users with a Developer account. World Bank staff might also request access to the [Twitter Decahose](https://developer.twitter.com/en/docs/twitter-api/enterprise/decahose-api/overview/decahose), which is a 10% random sample of all tweets ever published. 
-
-### Massive Twitter scraping at the World Bank
-
-In 2010, we started building a massive Twitter dataset using the Twitter Decahose. As of February 2021, this dataset contains tweets from more than 120 million geolocated users in 182 countries. Twitter users from our dataset joined Twitter in 2019 or earlier. Only users whose user-informed location contained a city name that could be geocoded with the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) were kept. This dataset was already used for several projects, including the early detection of labor market flows ([IC2S2 2020 presentation](https://www.youtube.com/watch?v=ZxFrtUW2dYA&feature=emb_logo)). Using this data taught us valuable lessons on the challenges of working with Twitter data and the best practices to tackle them. 
+The booming use of social media platforms, such as Twitter, made individuals’ daily preoccupations and interests observable to researchers. Indicators derived from social media measures can help identify shifts in public opinion in real time and study attitudes and behaviors that might be hard to capture from traditional surveys. It can also inform and enhance the targeting of surveys as well as bring a new lens to understand public opinion on economic policy. On top of their informational value, these new data sources have the advantage of being easily accessible. In the case of Twitter, the data is accessible, with some download limit rate, to all users with a Developer account. World Bank staff also have the opportunity to access to the [Twitter Decahose](https://developer.twitter.com/en/docs/twitter-api/enterprise/decahose-api/overview/decahose), which provides a continuous stream of 10% of all tweets. 
 
 ### Challenges with Twitter data
 
-One important challenge when working with Twitter data is the lack of representativeness of the Twitter population. Being on Twitter requires being literate, having a good Internet connection and an email address. This restricts the potential share of the world population with a Twitter account to a relatively richer share. This is observed in our dataset in which most represented countries with 50 or more Twitter users per 1000 inhabitants have a GDP per capita of at least 10.000 USD (value of 2019).
+One important challenge when working with Twitter data is the lack of representativeness of the population of Twitter users. Being on Twitter requires being literate, having a good Internet connection and an email address. As a result, the share of the world's population on Twitter tend to be located in richer countries and regions. This is illustrated in the figure below showing the relationship between Twitter penetration and GDP per capita (value of 2019). 
 
 ![Illustration](visualizations/pictures/twitter_gdp_capita.png)
-*Legend: Number of Twitter users per 1000 inhabitants of a country related this country's GDP per capita.*
+*Legend: Number of Twitter users per 1,000 inhabitants and GDP per capita, for countries with 50 or more Twitter users per 1,000 inhabitants and a GDP per capita of at least 10,000 USD. Estimates come from the Twitter decahose and include users whose profile location was identifed by the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview).*
 
-Geographically, this results in an over-representation of North and South America, Western Europe, Northeast and Southeast Asia. 
+Twitter users are concentrated in North and South America, Western Europe, Northeast and Southeast Asia. By contrast, only a small fraction of the African population is on Twitter.
 
 ![Illustration](visualizations/pictures/map_total_number_users.png)
-*Legend: Gross number of Twitter users from our dataset per city. Each dot represents a city in which Twitter users reside. The relative size of dots is determined by the gross number of Twitter users per city. Only city with 300.000 inhabitants or more are represented.*
+*Legend: Estimates of the number of Twitter users per city. Each dot represents a city, the size of each dot encodes the gross number of Twitter users reporting to live in that city, for cities with 300,000 inhabitants or more.*
 
-In terms of share of the population using Twitter, some countries stand out with more than 5% of their population using Twitter. These countries include developed countries such as the United Kingdom (11.4%), the USA (9.5%) or Canada (6.9%) but also middle income countries,  such as Uruguay (7.6%), Argentina (6.5%) or Venezuela (6%), as well as low-populated countries (Kuwait with 9.9%, Bermuda with 9.6% or Barbados with 6.9%). The complete data on the Twitter coverage of our dataset per country can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_countries.csv).
+Some countries have relatively high penetration rate, with more than 5% of their population using Twitter. This set includes some developed countries such as the United Kingdom (11.4%), the USA (9.5%) or Canada (6.9%) as well as middle income countries such as Uruguay (7.6%), Argentina (6.5%) or Venezuela (6%), as well as countries with a small population such as Kuwait with 9.9%, Bermuda with 9.6% or Barbados with 6.9%. Complete estimates of Twitter penetration rate per country can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_countries.csv).
 
 ![Illustration](visualizations/pictures/bar_user_country.png)
 
-At the city level, London is the most represented city in terms of gross number of users with 1.6 million Twitter users, followed by New York (1.5 million) and Jakarta (1.2 million). In terms of share of the population using Twitter, the top 2 cities are Indonesian with 59% of Yogyakarta's inhabitants and 23% of Bandung's on Twitter. The complete data on the Twitter coverage of our dataset per city can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_cities.csv). 
+London is the city with the largest number of Twitter users with 1.6 million users, followed by New York (1.5 million) and Jakarta (1.2 million). In terms of share of the population, the top 2 cities are in Indonesia with 59% of Yogyakarta's inhabitants and 23% of Bandung's being on Twitter. Complete estimates of Twitter penetration rate per city can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_cities.csv). 
 
 ![Illustration](visualizations/pictures/bar_user_city.png)
 
-Now, on top of the different socio-economic and geographical characteristics of population groups on and off Twitter, Twitter data is not produced equally by Twitter users. According to Twitter, in 2011, 40% of the network’s active users would sign in just to read messages from other users. Some users may not even be humans, with between 9% and 15% of 2017 Twitter active users being bots (Varol et al., 2017).
+Beyond socio-economic and geographical biases, there are large heterogeneities in how active Twitter users are. According to Twitter, estimates from 2011 indicate that 40% of users would only sign in just to read messages from other users. Some users may not even be humans, with between 9% and 15% of 2017 active users being bots (Varol et al., 2017).
 
 ### Demographic inference as a solution
 
-One solution to this challenge is to combine demographic inference of Twitter users and post-stratification to build more representative samples. One way to get user demographics is to match users with existing datasets containing individual socioeconomic information. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name. When such a dataset as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics, such as age, gender or whether the account belong to an organization, can be inferred based on user information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this learning material, we include one notebook on demographic inference, and more specifically gender inference, as a first step to address this challenge. 
- 
-
+To address these limitations, researchers have tried to either augment Twitter data with external data sources containing socioeconomic information on individuals, or infer demographic characteristics of Twitter users to build more representative samples. For instance, Grinberg et al. (2019) match Twitter accounts with U.S. registered voters using their name, creating a representative panel of voters. When a dataset such as the U.S. voting registry is not available, which is the case for most of the rest of the world, demographics characteristics such as age and gender, or whether the account belong to an organization, can be inferred based on user self-reported information (Nguyen et al., 2013; Chamberlain et al., 2017; Wang et al., 2019). In this tutorial, we include one notebook containing a toy example of how demographic characteristics of Twitter users can be inferred from the data. 
 
 ## References
 
