@@ -13,6 +13,7 @@ This repository contains the following:
   - `5-misinformation-analysis.ipynb`: quantifies misinformation in COVID-19-related tweets by looking for links whose domains are listed as fake news by [Newsguard](https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/)
   - `6-gender-inference`: infers the gender of Twitter users located in Brazil 
   - An `outputs` folder containing graphs produced using these notebooks
+- A `visualizations` folder containing the graphics displayed below and data/code to replicate these graphics
 - `README.md`: the present file
 
 ## Requirements
