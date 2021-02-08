@@ -8,7 +8,7 @@ import math
 from plotly.subplots import make_subplots
 
 
-def top_countries_two_axis(data,top_k, sort_by_gross_users = True,log_scale = False):
+def top_countries_two_axis(data,top_k, fig_name, sort_by_gross_users = True,log_scale = False):
     '''
     Creates a plotly object for the total and relative number of twitter users by country
     Inputs:
@@ -55,10 +55,10 @@ def top_countries_two_axis(data,top_k, sort_by_gross_users = True,log_scale = Fa
                         plot_bgcolor="#f7fafd")
     fig.update_yaxes(title_text='Users (Millions)', secondary_y = False)
     fig.update_yaxes(title_text='Users (per 1,000 people)', secondary_y = True)
-    #fig.write_html("./two_axis_plot.html")
+    fig.write_html("./pictures/{}.html".format(fig_name))
     return fig
 
-def top_cities_two_axis(data,top_k, sort_by_gross_users = True,log_scale = False):
+def top_cities_two_axis(data,top_k, fig_name,sort_by_gross_users = True,log_scale = False):
     '''
     Creates a plotly object for the total and relative number of twitter users by country
     Inputs:
@@ -103,10 +103,10 @@ def top_cities_two_axis(data,top_k, sort_by_gross_users = True,log_scale = False
                         plot_bgcolor="#f7fafd")
     fig.update_yaxes(title_text='Users (Millions)', secondary_y = False)
     fig.update_yaxes(title_text='Users (per 1,000 people)', secondary_y = True)
-    #fig.write_html("./two_axis_plot.html")
+    fig.write_html("./pictures/{}.html".format(fig_name))
     return fig
 
-def plot_gdp_and_users(dataframe):
+def plot_gdp_and_users(dataframe, fig_name):
     '''
     Plots a scatterplot of twitter users per 1k people and GDP per capita (2019)
     Inputs:
@@ -135,9 +135,10 @@ def plot_gdp_and_users(dataframe):
         hovertemplate = "<br>".join(["Country: %{text}",
             "GDP per capita: %{x:,.0f}" + "<extra></extra>",
             "Users per 1,000 people: %{y:,.2f}"]))
+    fig.write_html("./pictures/{}.html".format(fig_name))
     return fig
 
-def dot_maps(dataframe,total_users = True):
+def dot_maps(dataframe,map_name,total_users = True):
     '''
     Plots a dot map with total users OR users per 1k people
     Inputs:
@@ -168,6 +169,8 @@ def dot_maps(dataframe,total_users = True):
             color='k',
             tooltip = city.title() + ' (' + '{}'.format(users) + ' Users)' if total_users else city.title() + ' (' + '{0:.2f}'.format(users) + ' Users per 1K people)' 
             ).add_to(map_city)
+    map_city.save("./pictures/{}.html".format(map_name))
+               
     return map_city
 
 def top_countries(data,top_k_countries,gross_users = True,log_scale = False):
