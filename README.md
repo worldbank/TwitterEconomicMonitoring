@@ -31,7 +31,7 @@ The booming use of social media platforms, such as Twitter, made individuals’ 
 One important challenge when working with Twitter data is the lack of representativeness of the population of Twitter users. Being on Twitter requires being literate, having a good Internet connection and an email address. As a result, the share of the world's population on Twitter tend to be located in richer countries and regions. This is illustrated in the figure below showing the relationship between Twitter penetration and GDP per capita (value of 2019). 
 
 ![Illustration](visualizations/pictures/twitter_gdp_capita.png)
-*Legend: Number of Twitter users per 1,000 inhabitants and GDP per capita, for countries with 50 or more Twitter users per 1,000 inhabitants and a GDP per capita of at least 10,000 USD. Estimates come from the Twitter decahose and include users whose profile location was identifed by the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview).*
+*Legend: Number of Twitter users per 1,000 inhabitants and GDP per capita, for countries with 50 or more Twitter users per 1,000 inhabitants and a GDP per capita of at least 10,000 USD. Estimates come from the Twitter Decahose and include users whose profile location was identifed by the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview).*
 
 Twitter users are concentrated in North and South America, Western Europe, Northeast and Southeast Asia. By contrast, only a small fraction of the African population is on Twitter.
 
