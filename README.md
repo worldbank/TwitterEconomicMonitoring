@@ -38,7 +38,7 @@ Twitter users are concentrated in North and South America, Western Europe, North
 ![Illustration](visualizations/pictures/map_total_number_users.png)
 *Legend: Estimates of the number of Twitter users per city. Each dot represents a city, the size of each dot encodes the gross number of Twitter users reporting to live in that city, for cities with 300,000 inhabitants or more.*
 
-Some countries have relatively high penetration rate, with more than 5% of their population using Twitter. This set includes some developed countries such as the United Kingdom (11.4%), the USA (9.5%) or Canada (6.9%) as well as middle income countries such as Uruguay (7.6%), Argentina (6.5%) or Venezuela (6%), as well as countries with a small population such as Kuwait with 9.9%, Bermuda with 9.6% or Barbados with 6.9%. Complete estimates of Twitter penetration rate per country can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_countries.csv).
+Some countries have relatively high penetration rate, with more than 5% of their population using Twitter. This set includes some developed countries such as the United Kingdom (11.4%), the USA (9.5%) or Canada (6.9%), middle income countries such as Uruguay (7.6%), Argentina (6.5%) or Venezuela (6%), as well as countries with a small population such as Kuwait with 9.9%, Bermuda with 9.6% or Barbados with 6.9%. Complete estimates of Twitter penetration rate per country can be found [here](https://github.com/worldbank/TwitterEconomicMonitoring/blob/master/visualizations/data/twitter_coverage_countries.csv).
 
 ![Illustration](visualizations/pictures/bar_user_country.png)
 
